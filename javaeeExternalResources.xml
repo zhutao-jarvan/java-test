@@ -1,0 +1,11 @@
+<application>
+  <component name="ExternalResourceManagerImpl">
+    <resource url="http://www.springframework.org/dtd/spring-beans.dtd" location="$USER_HOME$/.IntelliJIdea2017.2/system/extResources/5b169fd5_spring-beans.dtd" />
+    <resource url="http://www.springframework.org/schema/beans/spring-beans-4.3.xsd" location="$USER_HOME$/.IntelliJIdea2017.2/system/extResources/d83fe593_spring-beans-4.3.xsd" />
+    <resource url="http://www.springframework.org/schema/context/spring-context.xsd" location="$USER_HOME$/.IntelliJIdea2017.2/system/extResources/a93b54e7_spring-context.xsd" />
+    <resource url="http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd" location="$USER_HOME$/.IntelliJIdea2017.2/system/extResources/fdeedafb_spring-jpa-1.3.xsd" />
+    <resource url="http://www.springframework.org/schema/data/repository/spring-repository.xsd" location="$USER_HOME$/.IntelliJIdea2017.2/system/extResources/977a1048_spring-repository.xsd" />
+    <resource url="http://www.springframework.org/schema/security/spring-security-3.2.xsd" location="$USER_HOME$/.IntelliJIdea2017.2/system/extResources/8e1d3a73_spring-security-3.2.xsd" />
+    <resource url="http://www.springframework.org/schema/tool/spring-tool-4.3.xsd" location="$USER_HOME$/.IntelliJIdea2017.2/system/extResources/946a6b65_spring-tool-4.3.xsd" />
+  </component>
+</application>
