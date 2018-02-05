@@ -3,7 +3,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 class Car {
-    private boolean waxOn = false;
+    protected boolean waxOn = false;
 
     public synchronized void waxed() {
         waxOn = true;
@@ -37,7 +37,7 @@ class WaxOn implements Runnable {
     public void run() {
         try {
             while (!Thread.interrupted()) {
-                System.out.println("Wax on!" );
+                System.out.println("Wax on! "  +  car.getClass().getName());
                 TimeUnit.MILLISECONDS.sleep(200);
                 car.waxed();
                 car.waitForBuffing();
@@ -62,7 +62,7 @@ class WaxOff implements Runnable {
         try {
             while (!Thread.interrupted()) {
                 car.waitForWaxing();
-                System.out.println("Wax off!" );
+                System.out.println("Wax off! " +  car.getClass().getName());
                 TimeUnit.MILLISECONDS.sleep(200);
                 car.buffed();
             }

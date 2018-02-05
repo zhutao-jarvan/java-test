@@ -8,19 +8,20 @@ public class BusyDelay {
     class Task1 implements Runnable {
         @Override
         public void run() {
-            while (!Thread.interrupted()) {
-                try {
-                    TimeUnit.SECONDS.sleep(1);
+            try {
+                while (!Thread.interrupted()) {
+                    TimeUnit.MILLISECONDS.sleep(500);
+                    System.out.println("Set flag to true");
+                    TimeUnit.MILLISECONDS.sleep(500);
                     synchronized (BusyDelay.this) {
                         flag = true;
-                        BusyDelay.this.notifyAll();
+                        BusyDelay.this.notify();
                     }
-                    System.out.println("Set flag to true");
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                    break;
                 }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
+
             System.out.println("Exit task1");
         }
     }
@@ -28,20 +29,20 @@ public class BusyDelay {
     class Task2 implements Runnable {
         @Override
         public void run() {
-            while (!Thread.interrupted()) {
-                synchronized (BusyDelay.this) {
-                    try {
+            synchronized (BusyDelay.this) {
+                try {
+                    while (!Thread.interrupted()) {
                         BusyDelay.this.wait();
                         if (flag) {
                             System.out.println("Set flag to false");
                             flag = false;
                         }
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                        break;
                     }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
+
             System.out.println("Exit task2");
         }
     }
