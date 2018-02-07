@@ -62,9 +62,5 @@ public class TestBlockingQueues {
         LiftOffRunner runner = new LiftOffRunner(q);
         Thread t = new Thread(runner);
         t.start();
-        for (int i = 0; i < 5; i++) {
-            runner.add();
-            
-        }o
     }
 }
