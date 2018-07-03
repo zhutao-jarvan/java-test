@@ -82,6 +82,26 @@
           </option>
           <option name="targetPath" value="/opt/apache-tomcat-8.0.52/webapps" />
         </WebDeploymentTransportHostTarget>
+        <WebDeploymentTransportHostTarget>
+          <option name="hostId" value="7197be76-0a91-4ec3-8fdb-b044c42de5db" />
+          <option name="target">
+            <TransportTarget>
+              <option name="id" value="c759b982-bda6-4bdb-b293-46567516bf4e" />
+              <id>c759b982-bda6-4bdb-b293-46567516bf4e</id>
+            </TransportTarget>
+          </option>
+          <option name="targetPath" value="" />
+        </WebDeploymentTransportHostTarget>
+        <WebDeploymentTransportHostTarget>
+          <option name="hostId" value="7197be76-0a91-4ec3-8fdb-b044c42de5db" />
+          <option name="target">
+            <TransportTarget>
+              <option name="id" value="a4d19dc1-3caa-42fd-9d4a-a121b17a5f26" />
+              <id>a4d19dc1-3caa-42fd-9d4a-a121b17a5f26</id>
+            </TransportTarget>
+          </option>
+          <option name="targetPath" value="/opt/apache-tomcat-8.0.52/webapps" />
+        </WebDeploymentTransportHostTarget>
       </list>
     </option>
   </component>
